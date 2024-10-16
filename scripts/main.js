@@ -1,4 +1,5 @@
 const header = document.querySelector('.header');
+const scrollUpButton = document.querySelector('#scroll-up');
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 1) {
@@ -7,3 +8,5 @@ window.addEventListener('scroll', () => {
   } 
   header.classList.remove('_small');
 });
+
+scrollUpButton.addEventListener('click', () => window.scrollTo(0, 0));

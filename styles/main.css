@@ -198,7 +198,8 @@ section:not(:last-child) {
 .footer__info span {
   font-weight: 600;
 }
-.footer__info a {
+#scroll-up {
+  font-size: 18px;
   color: #f9f8f8;
   background-color: #b249b7;
   padding: 16px 32px;
