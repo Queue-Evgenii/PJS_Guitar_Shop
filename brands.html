@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/home.css">
+  <title>Musician Store</title>
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="_container _flex _ai-c _jc-sb _gap-32">
+      <a href="./home.html" class="header__logo _img">
+        <img src="./assets/images/logo.png" alt="">
+      </a>
+      <button class="header__burger burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="header__navigation _flex _ai-c _jc-sb _gap-24">
+        <ul class="header__menu _flex _ai-c _gap-16">
+          <li>
+            <a href="#">Service</a>
+          </li>
+          <li>
+            <a href="#">Contact Us</a>
+          </li>
+          <li>
+            <a href="#">About Us</a>
+          </li>
+        </ul>
+        <div class="header__phone _flex _ai-c _gap-8">
+          <span>Ukraine:</span>
+          <a href="tel=0956739047">095 673 90 47</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main class="content">
+    <section class="content__brands">
+      <div class="_container">
+        <h2 class="brands-content__title _title _title-mb _ta-c">
+          Brands
+        </h2>
+        <ul id="brands-list" class="brands-content__list _hidden">
+        </ul>
+        <h3 id="brands-not-found" class="brands-content__not-found _title _title-mb _hidden">
+          Images not found!
+        </h3>
+        <div id="brands-loader" class="_ta-c">
+          <img src="./assets/images/loader-new.gif" alt="">
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="_container">
+      <nav class="_flex _ai-c _jc-sb _gap-24">
+        <ul class="footer__menu _flex _ai-c _gap-16">
+          <li>
+            <a href="#">Policy</a>
+          </li>
+          <li>
+            <a href="#">Service</a>
+          </li>
+          <li>
+            <a href="#">Contact Us</a>
+          </li>
+          <li>
+            <a href="#">About Us</a>
+          </li>
+        </ul>
+        <div class="footer__info _flex _ai-c _gap-16">
+          <span>All rights reserved.</span>
+          <button type="button" id="scroll-up">Scroll Up!</button>
+        </div>
+      </nav>
+    </div>
+  </footer>
+</body>
+<script type="module" src="./scripts/index.js"></script>
+<script type="module" src="./scripts/brands/index.js"></script>
+</html>
