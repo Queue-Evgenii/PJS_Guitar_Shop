@@ -9,4 +9,14 @@ window.addEventListener('scroll', () => {
   header.classList.remove('_small');
 });
 
-scrollUpButton.addEventListener('click', () => window.scrollTo(0, 0));
+scrollUpButton.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+
+
+const burger = document.querySelector('.burger');
+const navigation = document.querySelector('.header__navigation');
+
+burger.addEventListener('click', () => {
+  navigation.classList.toggle('_active');
+  burger.classList.toggle('_active');
+});

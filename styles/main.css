@@ -104,11 +104,15 @@ section:not(:last-child) {
 }
 .header, .header__logo {
   height: 76px;
-  transition: height 0.3s ease;
+  transition: height 1s ease;
 }
 .header._small{
   background-color: #e2e2e2;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.header._small a,
+.header._small span {
+  font-size: 18px;
 }
 .header._small, .header._small .header__logo {
   height: 64px;
@@ -116,13 +120,18 @@ section:not(:last-child) {
 .header__navigation {
   flex: 1 1 auto;
 }
+.footer {
+  background-color: #eeeeee;
+}
 
 .header__menu a, .header__phone a {
+  transition: font-size 1s ease;
   color:#b249b7;
   font-size: 24px;
   font-weight: 700;
 }
 .header__phone span {
+  transition: font-size 1s ease;
   color:#b249b7;
   font-size: 24px;
 }
@@ -204,4 +213,74 @@ section:not(:last-child) {
   background-color: #b249b7;
   padding: 16px 32px;
   border-radius: 12px 12px 0 0 ;
+}
+
+
+
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 20px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.burger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #b249b7;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Адаптивный стиль */
+@media (max-width: 992px) {
+  .burger {
+    display: flex;
+  }
+
+  .header__navigation {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    background: #f9f8f8;
+    flex-direction: column;
+    justify-content: start;
+    transition: max-height 0.3s ease;
+    row-gap: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .header__menu {
+    padding-top: 24px;
+    flex-direction: column;
+  }
+  .header__phone {
+    padding-bottom: 48px;
+  }
+
+  .header__navigation._active {
+    max-height: 350px;
+  }
+
+  .burger._active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+  
+  .burger._active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .burger._active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
 }
