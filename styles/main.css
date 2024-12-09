@@ -105,6 +105,7 @@ section:not(:last-child) {
   position: sticky;
   top: 0;
   background-color: #f9f8f8;
+  z-index: 1000;
 }
 .header, .header__logo {
   height: 76px;

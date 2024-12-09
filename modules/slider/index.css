@@ -1,6 +1,7 @@
 .slider-container {
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
 .slider-wrapper {
@@ -31,7 +32,7 @@
   border: none;
   padding: 10px;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 2;
 }
 
 .slider-prev-btn {
