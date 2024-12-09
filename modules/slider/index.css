@@ -1,0 +1,47 @@
+.slider-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.slider-wrapper._slider-grab {
+  cursor: grab;
+}
+.slider-wrapper._slider-grab:active {
+  cursor: grabbing;
+}
+
+.slider-slide {
+  flex: 0 0 33.333%;
+  text-align: center;
+  font-size: 24px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.slider-prev-btn {
+  left: 10px;
+}
+
+.slider-next-btn {
+  right: 10px;
+}
+
+.slider-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}

@@ -46,6 +46,7 @@
 }
 .categories-item__image {
   flex: 1 1 auto;
+  height: 125px;
 }
 .categories-item__name {
   text-align: center;
