@@ -2,12 +2,17 @@ import { loadImage } from "../api/images.js";
 
 const createImgNode = (imgPath) => {
   const newBrandItem = document.createElement("li");
-  newBrandItem.className = "brands-list__item _img";
+  newBrandItem.className = " ";
+
+  const newBrandlink = document.createElement("a");
+  newBrandlink.className = "brands-list__item _img";
+  newBrandlink.href = "/";
 
   const brandImage = document.createElement("img");
   brandImage.src = imgPath;
 
-  newBrandItem.appendChild(brandImage);
+  newBrandlink.appendChild(brandImage);
+  newBrandItem.appendChild(newBrandlink);
 
   return newBrandItem;
 }
@@ -44,4 +49,22 @@ loadImages("../../assets/images/brands", 15)
   })
   .finally(() => {
     brandsLoaderRef.classList.add("_hidden");
-  })
+    setupPopup();
+  });
+
+const setupPopup = () => {
+  const popup = document.querySelector(".popup");
+  const popupImg = document.querySelector(".popup__image");
+  document
+    .querySelectorAll(".brands-list__item")
+    .forEach(item => {
+      const img = item.querySelector("img");
+      img.addEventListener("click", (e) => {
+        e.preventDefault();
+        popupImg.src = img.src;
+        popup.style.display = 'flex';
+      })
+    });
+
+  popup.addEventListener("click", () => popup.style.display = 'none');
+}
