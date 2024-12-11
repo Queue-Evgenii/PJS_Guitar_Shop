@@ -46,9 +46,9 @@ body {
 body, a {
   color: #000;
 }
-a:hover {
+/* a:hover {
   text-decoration: underline;
-}
+} */
 section {
   padding: 32px 0 64px;
 }
