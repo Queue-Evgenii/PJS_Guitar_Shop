@@ -1,0 +1,37 @@
+[
+  {
+    "id": 0,
+    "name": "guitars",
+    "products": [
+      {
+        "id": 0,
+        "name": "Cort G110",
+        "price": 191,
+        "image": "../assets/data_images/guitars/01.webp"
+      },
+      {
+        "id": 1,
+        "name": "Harley Benon HB35 Cherry",
+        "price": 380,
+        "image": "../assets/data_images/guitars/02.jpeg"
+      },
+      {
+        "id": 2,
+        "name": "Harley Benon TE62",
+        "price": 300,
+        "image": "../assets/data_images/guitars/03.jpeg"
+      },
+      {
+        "id": 3,
+        "name": "Yamaha F310",
+        "price": 250,
+        "image": "../assets/data_images/guitars/04.webp"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "name": "keys",
+    "products": []
+  }
+]

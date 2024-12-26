@@ -71,7 +71,7 @@ const setupShakeAnimation = (selector) => {
   
     button.addEventListener('mouseenter', () => {
       shake.reset();
-      shake.play()
+      shake.play();
     });
     button.addEventListener('mouseleave', () => shake.pause());
   });
